@@ -17,15 +17,13 @@ function getResult(a,b,c){
 function getAverageMark(marks){
     let sum = 0;
     let averageMark = 0;
-    if (marks.length == 0){
-        return 0;
-    } else if (marks.length > 5){
-        console.log('Оценок слишком много');
-        marks.splice(0.5);
-    }
-    for(let i = 0; i < marks.length; i++){
-        sum += marks[i];
-        averageMark = sum/marks.length;
+    if (marks.length > 0) {
+        console.log('Количество оценок больше 5');
+        marks.splice(5);
+        for (let i = 0; i < marks.length; i++) {
+            sum += marks[i];
+        }
+        averageMark = sum / marks.length;
     }
     return averageMark;
 }
