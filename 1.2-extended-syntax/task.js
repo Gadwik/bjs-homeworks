@@ -1,7 +1,7 @@
 "use strict"
 
 function getResult(a,b,c){
-    let discriminant = b**2 - 4 * a * c;
+    let discriminant = Math.pow(b, 2) - 4 * a *c;;
     let x = [];
     
     if(discriminant == 0){
@@ -18,7 +18,7 @@ function getAverageMark(marks){
     let sum = 0;
     let averageMark = 0;
     if (marks.length > 0) {
-        console.log('Количество больше 5');
+        console.log('Количество оценок больше 5');
         marks.splice(5);
         for (let i = 0; i < marks.length; i++) {
             sum += marks[i];
